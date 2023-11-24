@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none !important;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        background-color: red;
+        width: 300px;
+        ;
+    }
+
+    .d-none {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="nav_show" class="navbar d-none">
+        <ul style="color: white; font-size: 30px;">
+            <li>home</li>
+            <li>about</li>
+            <li>services</li>
+        </ul>
+        <button onclick="navclose()">close</button>
+    </div>
+    <div id="hide_nav">
+        <ul style="color: black; font-size: 30px; display: flex; gap: 50px;" class="d-block">
+            <li>home</li>
+            <li>about</li>
+            <li>services</li>
+        </ul>
+    </div>
+    <button onclick="navopen()">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </button>
+    <script>
+        function navopen() {
+            document.getElementById("nav_show").classList.remove("d-none");
+             document.getElementById("hide_nav").classList.add("d-none")
+        }
+        function navclose() {
+            document.getElementById("nav_show").classList.add("d-none");
+              document.getElementById("hide_nav").classList.remove("d-none")
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
